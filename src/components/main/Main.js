@@ -14,9 +14,9 @@ const Main = () => {
                     <p>나는 이율곡이고 앞으로 하고 싶은게 많아.</p>
                 </div>
                 <div className={classes["intro-menu-container"]}>
-                    <div className={classes["intro-menu1"]}>Resume</div>
-                    <div className={classes["intro-menu2"]}>Projects</div>
-                    <div className={classes["intro-menu3"]}>Contact</div>
+                    <button className={classes["intro-menu1"]}>Resume</button>
+                    <button className={classes["intro-menu2"]}>Projects</button>
+                    <button className={classes["intro-menu3"]}>Contact</button>
                 </div>
             </section>
         </main>

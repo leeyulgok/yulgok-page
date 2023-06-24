@@ -3,14 +3,18 @@ import { Fragment } from "react";
 import Header from "./components/layouts/header/Header";
 import Footer from "./components/layouts/footer/Footer";
 import Main from "./components/main/Main";
-// import Contact from "./components/Contact/Contact";
+import Resume from "./components/contents/Resume/Resume";
+import Projects from "./components/contents/Projects/Projects";
+import Contact from './components/contents/Contact/Contact';
 
 const App = () => {
   return (
     <Fragment>
       <Header />
       <Main />
-      {/* <Contact /> */}
+      <Resume />
+      <Projects />
+      <Contact />
       <Footer />
     </Fragment>
   );

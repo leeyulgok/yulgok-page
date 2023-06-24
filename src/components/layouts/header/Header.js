@@ -4,7 +4,7 @@ const Header = props => {
     return (
         <header className={classes['main-header-container']}>
             <div className={classes["name-header"]}>
-                <div className={classes["header-circle"]}></div>
+                <button className={classes["header-circle"]}></button>
                 <h1>LEE YULGOK</h1>
                 <p>Developer</p>
             </div>
