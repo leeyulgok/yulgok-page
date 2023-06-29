@@ -1,21 +1,21 @@
 import classes from './ResumeContent.module.css';
 
-const ResumeContent = () => {
+const ResumeContent = ({ title, years, contentTitle, contentText }) => {
   return (
     <div className={classes.content}>
       <div className={classes.title}>
-        <h2>Work-Experience</h2>
+        <h2>{title}</h2>
       </div>
-      <div className={classes["contents-main"]}>
+      <div className={classes.contentsMain}>
         <div className={classes.years}>
-          <p>2022-2023</p>
+          <p>{years}</p>
         </div>
         <div className={classes.contents}>
-          <div className={classes["contents-title"]}>
-            <h4>일본</h4>
+          <div className={classes.contentsTitle}>
+            <h4>{contentTitle}</h4>
           </div>
-          <div className={classes["contents-text"]}>
-            <p>내용</p>
+          <div className={classes.contentsText}>
+            <p>{contentText}</p>
           </div>
         </div>
       </div>

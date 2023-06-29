@@ -6,7 +6,7 @@ import classes from "./ContactForm.module.css";
 const ContactForm = () => {
   return (
     <section className={classes.contactSection}>
-      <form className={classes.contactForm}>
+      <form className={classes.contactForm} method="GET">
         <div className={classes.contactContainer}>
           <div className={classes.contactRow}>
             <FormField label="Name" type="text" name="name" />

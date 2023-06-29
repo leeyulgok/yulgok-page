@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import FooterItem from "./FooterItem";
 
 import Blog from "./Blog";
@@ -8,6 +6,11 @@ import Git from "./Git";
 import classes from "./Footer.module.css";
 
 const Footer = () => {
+  const contactIcon = [
+    { component: <Blog />, link: "https://velog.io/@dbfrhr20" },
+    { component: <Git />, link: "https://github.com/leeyulgok" },
+  ];
+
   return (
     <footer className={classes.footerContainer}>
       <hr />
@@ -16,14 +19,15 @@ const Footer = () => {
           <FooterItem title="Phone">010-5548-9567</FooterItem>
           <FooterItem title="E-mail">dbfrhr20@gmail.com</FooterItem>
           <FooterItem title="Follow Me">
-            <div className={classes.iconContainer}>
-              <Link to="https://velog.io/@dbfrhr20" target="_blank">
-                <Blog />
-              </Link>
-              <Link to="https://github.com/leeyulgok" target="_blank">
-                <Git />
-              </Link>
-            </div>
+          {contactIcon && (
+              <div className={classes["icon-container"]}>
+                {contactIcon.map((icon, i) => (
+                  <a href={icon.link} target="_blank" rel="noopener noreferrer" key={i}>
+                    {icon.component}
+                  </a>
+                ))}
+              </div>
+            )}
           </FooterItem>
           <FooterItem>010-####-####</FooterItem>
         </ul>

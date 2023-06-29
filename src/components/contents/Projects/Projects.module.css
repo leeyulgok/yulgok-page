@@ -1,19 +1,19 @@
-.projects-container {
+.projectsContainer {
     margin: 50px auto;
     max-width: 800px;
   }
   
-  .projects-header {
+  .projectsHeader {
     text-align: left;
     margin-bottom: 50px;
   }
   
-  .projects-header h1 {
+  .projectsHeader h1 {
     font-size: 36px;
     margin: 0;
   }
   
-  .projects-main {
+  .projectsMain {
     display: flex;
     flex-direction: column;
   }

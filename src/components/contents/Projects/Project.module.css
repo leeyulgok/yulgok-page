@@ -3,29 +3,29 @@
     margin-bottom: 40px;
   }
   
-  .project-content {
+  .projectContent {
     flex-basis: 60%;
   }
   
-  .project-title {
+  .projectTitle {
     margin-bottom: 10px;
   }
   
-  .project-title h2 {
+  .projectTitle h2 {
     font-size: 24px;
     margin: 0;
   }
   
-  .project-des p {
+  .projectDes p {
     margin: 0;
   }
   
-  .project-image {
+  .projectImage {
     flex-basis: 40%;
     text-align: right;
   }
   
-  .project-image img {
+  .projectImage img {
     width: 100%;
     height: auto;
   }

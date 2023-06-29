@@ -1,21 +1,21 @@
-.resume-container {
+.resumeCntainer {
     width: 94%;
     justify-content: space-between;
     margin: 100px auto;
     margin-left: 50px;
   }
   
-  .resume-header {
+  .resumeHeader {
     text-align: left;
-    margin-bottom: 50px; /* 요구사항 1: resume-header와 content 사이에 간격 조정 */
+    margin-bottom: 50px;
   }
   
-  .resume-header h1 {
-    font-size: 40px; /* 요구사항 3: 글씨 크기 키우기 */
+  .resumeHeader h1 {
+    font-size: 40px;
     margin: 0;
   }
   
-  .resume-main {
+  .resumeMain {
     display: flex;
     flex-direction: column;
   }
