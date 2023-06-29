@@ -1,4 +1,9 @@
+import { Link } from 'react-router-dom';
+
 import classes from './Footer.module.css';
+
+import Blog from './Blog';
+import Git from './Git';
 
 const Footer = props => {
     return (
@@ -21,7 +26,10 @@ const Footer = props => {
                     <li className={classes.item}>
                         <div className={classes["item-container"]}>
                             <h3>Follow Me</h3>
-                            <p>아이콘</p>
+                            <div className={classes['icon-container']}>
+                                <Link to='https://velog.io/@dbfrhr20' target='_blank'><Blog /></Link>
+                                <Link to='https://github.com/leeyulgok' target='_blank'><Git /></Link>
+                            </div>
                         </div>
                     </li>
                     <li className={classes.item}>

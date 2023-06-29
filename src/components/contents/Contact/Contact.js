@@ -1,3 +1,8 @@
+import { Link } from "react-router-dom";
+
+import Blog from "../../layouts/footer/Blog";
+import Git from "../../layouts/footer/Git";
+
 import classes from "./Contact.module.css";
 
 const Contact = (props) => {
@@ -19,7 +24,14 @@ const Contact = (props) => {
           </div>
           <div className={classes["contact-item"]}>
             <h3>Etc</h3>
-            <small>아이콘</small>
+            <div className={classes["icon-container"]}>
+              <Link to="https://velog.io/@dbfrhr20" target="_blank">
+                <Blog />
+              </Link>
+              <Link to="https://github.com/leeyulgok" target="_blank">
+                <Git />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
