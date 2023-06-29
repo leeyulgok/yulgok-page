@@ -1,26 +1,31 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import classes from './Header.module.css';
+import Button from "../../UI/Button";
+import HeaderItem from "./HeaderItem";
 
-const Header = props => {
-    return (
-        <header className={classes['main-header-container']}>
-            <div className={classes["name-header"]}>
-                <Link to='/'><button className={classes["header-circle"]}></button></Link>
-                <h1>LEE YULGOK</h1>
-                <p>Developer</p>
-            </div>
-            <div className={classes["menu-header"]}>
-                <ul className={classes["menu-list"]}>
-                    <Link to='/resume'><li>Resume</li></Link>
-                    <li>|</li>
-                    <Link to='/projects'><li>Project</li></Link>
-                    <li>|</li>
-                    <Link to='/contact'><li>Contact </li></Link>
-                </ul>
-            </div>
-        </header>
-    );
+import classes from "./Header.module.css";
+
+const Header = () => {
+  return (
+    <header className={classes.mainHeaderContainer}>
+      <div className={classes.nameHeader}>
+        <Link to="/">
+          <Button className={classes.headerCircle}></Button>
+        </Link>
+        <h1>LEE YULGOK</h1>
+        <p>Developer</p>
+      </div>
+      <div className={classes.menuHeader}>
+        <ul className={classes.menuList}>
+          <HeaderItem link="/resume">Resume</HeaderItem>
+          <li>|</li>
+          <HeaderItem link="/projects">Project</HeaderItem>
+          <li>|</li>
+          <HeaderItem link="/contact">Contact</HeaderItem>
+        </ul>
+      </div>
+    </header>
+  );
 };
 
 export default Header;

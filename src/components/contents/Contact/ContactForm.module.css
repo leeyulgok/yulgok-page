@@ -1,0 +1,47 @@
+.contactSection {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.submitBtn {
+  margin-top: 24px;
+  flex: 0 0 48%;
+}
+
+.contactBtn {
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  background-color: salmon;
+  border: 1px solid black;
+  color: black;
+}
+
+.contactRow > div {
+  flex: 0 0 48%;
+}
+
+.contactRow:last-child > div {
+  flex: 0 0 100%;
+}

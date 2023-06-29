@@ -1,4 +1,4 @@
-.main-header-container {
+.mainHeaderContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,23 +6,16 @@
   padding: 10px;
 }
 
-.name-header {
+.nameHeader {
   display: flex;
   align-items: center;
 }
 
-.header-circle {
+.headerCircle {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   background-color: salmon;
   border: 0.5px solid black;
-  margin-right: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  cursor: pointer;
 }
 
 h1 {
@@ -40,25 +33,12 @@ p {
   padding-top: 12px;
 }
 
-.menu-list {
+.menuList {
   list-style-type: none;
-  display: inline;
+  display: flex;
   padding: 0;
 }
 
-.menu-list li {
-  display: inline;
+.menuList li {
   margin-right: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.menu-list li:hover {
-  color: brown;
-}
-
-.menu-list a {
-  text-decoration: none;
-  color: black;
 }

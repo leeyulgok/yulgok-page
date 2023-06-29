@@ -1,0 +1,19 @@
+button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s; /* 요구사항 1: 그라데이션 효과를 위한 transition 추가 */
+    cursor: pointer; /* 요구사항 2: 마우스 커서를 포인터로 변경 */
+  }
+
+  button:hover {
+    background: linear-gradient(45deg, #f5f5f5, #ebebeb);
+  }

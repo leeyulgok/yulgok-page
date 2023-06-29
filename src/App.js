@@ -22,7 +22,7 @@ const App = () => {
               <CSSTransition
                 key={"/"}
                 in={true}
-                timeout={300}
+                timeout={500}
                 classNames="page-transition"
                 unmountOnExit
               >
@@ -36,7 +36,7 @@ const App = () => {
               <CSSTransition
                 key={"/resume"}
                 in={true}
-                timeout={300}
+                timeout={500}
                 classNames="page-transition"
                 unmountOnExit
               >
@@ -50,7 +50,7 @@ const App = () => {
               <CSSTransition
                 key={"/projects"}
                 in={true}
-                timeout={300}
+                timeout={500}
                 classNames="page-transition"
                 unmountOnExit
               >
@@ -64,7 +64,7 @@ const App = () => {
               <CSSTransition
                 key={"/contact"}
                 in={true}
-                timeout={300}
+                timeout={500}
                 classNames="page-transition"
                 unmountOnExit
               >

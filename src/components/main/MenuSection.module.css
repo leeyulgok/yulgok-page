@@ -1,0 +1,20 @@
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuItem {
+  text-decoration: none;
+}
+
+.introMenu1 {
+  background-color: #ff6699;
+}
+
+.introMenu2 {
+  background-color: #66ccff;
+}
+
+.introMenu3 {
+  background-color: #99ff99;
+}

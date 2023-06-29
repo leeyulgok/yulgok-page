@@ -1,0 +1,25 @@
+.contents {
+    width: 48%;
+    flex: 0 0 48%;
+    margin-bottom: 10px;
+  }
+  
+  .contents:last-child {
+    width: 100%;
+  }
+
+  .contents input,
+  .contents textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .contents textarea {
+    height: 150px;
+    resize: none;
+  }
+  
