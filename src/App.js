@@ -12,24 +12,19 @@ import Contact from "./components/contents/Contact/Contact";
 import Loading from "./components/UI/Loading";
 import "./App.css";
 
+const routes = [
+  { path: "/", component: <Main />, key: "/" },
+  { path: "/resume", component: <Resume />, key: "/resume" },
+  { path: "/projects", component: <Projects />, key: "/projects" },
+  { path: "/contact", component: <Contact />, key: "/contact" },
+];
+
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const [routes, setRoutes] = useState([]);
-
-  const getRoutes = () => {
-    const routes = [
-      { path: "/", component: <Main />, key: "/" },
-      { path: "/resume", component: <Resume />, key: "/resume" },
-      { path: "/projects", component: <Projects />, key: "/projects" },
-      { path: "/contact", component: <Contact />, key: "/contact" },
-    ];
-    setRoutes(routes);
-    setLoading(false);
-  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      getRoutes();
+      setLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -51,7 +46,7 @@ const App = () => {
                   <CSSTransition
                     key={key}
                     in={true}
-                    timeout={500}
+                    timeout={300}
                     classNames="page-transition"
                     unmountOnExit
                   >

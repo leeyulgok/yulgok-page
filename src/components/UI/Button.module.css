@@ -10,7 +10,7 @@ button {
     color: black;
     font-size: 18px;
     text-transform: uppercase;
-    transition: background-color 0.3s; /* 요구사항 1: 그라데이션 효과를 위한 transition 추가 */
+    transition: background-color 1s;
     cursor: pointer; /* 요구사항 2: 마우스 커서를 포인터로 변경 */
   }
 

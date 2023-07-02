@@ -1,6 +1,5 @@
 .menuContainer {
   display: flex;
-  justify-content: space-between;
 }
 
 .menuItem {
@@ -17,4 +16,38 @@
 
 .introMenu3 {
   background-color: #99ff99;
+}
+
+.delay0 {
+  transition-delay: 0s;
+}
+
+.delay1 {
+  transition-delay: 0.1s;
+}
+
+.delay2 {
+  transition-delay: 0.2s;
+}
+
+.menuTransitionEnter {
+  opacity: 0;
+  transform: translateY(30%);
+}
+
+.menuTransitionEnterActive {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.menuTransitionExit {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.menuTransitionExitActive {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }

@@ -1,0 +1,20 @@
+[
+    {
+      "id": "MySQL",
+      "data": [
+        {
+          "x": "Confidence",
+          "y": 70
+        }
+      ]
+    },
+    {
+      "id": "MongoDB",
+      "data": [
+        {
+          "x": "Confidence",
+          "y": 40
+        }
+      ]
+    }
+  ]

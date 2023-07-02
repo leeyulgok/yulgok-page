@@ -1,21 +1,26 @@
 .page-transition-enter {
   opacity: 0;
-  transform: translateY(30%);
+  filter: blur(5px);
+  transform: translateY(0%);
 }
 
 .page-transition-enter-active {
   opacity: 1;
+  filter: blur(0);
   transform: translateY(0%);
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  transition: opacity 600ms ease-in-out, filter 600ms ease-in-out,
+    transform 600ms ease-in-out;
 }
 
 .page-transition-exit {
   opacity: 1;
-  transform: translateY(-100%);
+  filter: blur(0);
+  transform: translateY(0%);
 }
-
 .page-transition-exit-active {
   opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  filter: blur(5px);
+  transform: translateY(0%);
+  transition: opacity 1200ms ease-in-out, filter 1200ms ease-in-out,
+    transform 1200ms ease-in-out;
 }

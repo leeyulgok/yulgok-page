@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import classes from "./Resume.module.css";
 import ResumeContent from "./ResumeContent";
 
+import Skills from "./Skills";
+
 const Resume = () => {
   const resumeContents = [
     {
@@ -18,10 +20,8 @@ const Resume = () => {
       contentText: "내용 2",
     },
     {
-      title: "Work-Experience 3",
-      years: "2020-2021",
-      contentTitle: "제목 3",
-      contentText: "내용 3",
+      title: "Skills",
+      component: <Skills />
     },
   ];
 

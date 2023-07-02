@@ -1,0 +1,29 @@
+[
+  {
+    "id": "Javascript",
+    "data": [
+      {
+        "x": "Confidence",
+        "y": 90
+      }
+    ]
+  },
+  {
+    "id": "CSS",
+    "data": [
+      {
+        "x": "Confidence",
+        "y": 70
+      }
+    ]
+  },
+  {
+    "id": "React",
+    "data": [
+      {
+        "x": "Confidence",
+        "y": 80
+      }
+    ]
+  }
+]
