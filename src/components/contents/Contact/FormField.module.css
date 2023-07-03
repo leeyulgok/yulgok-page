@@ -1,25 +1,53 @@
 .contents {
-    width: 48%;
-    flex: 0 0 48%;
-    margin-bottom: 10px;
-  }
-  
-  .contents:last-child {
-    width: 100%;
-  }
+  width: 48%;
+  flex: 0 0 48%;
+  margin-bottom: 10px;
+}
 
-  .contents input,
-  .contents textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 0;
-    margin-top: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .contents textarea {
-    height: 150px;
-    resize: none;
-  }
-  
+.contents:last-child {
+  width: 100%;
+}
+
+.contents input,
+.contents textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.contents textarea {
+  height: 150px;
+  resize: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row div {
+  display: flex;
+}
+
+.reset {
+  border: 1px solid black;
+  justify-self: center;
+  text-align: center;
+  margin-left: 3px;
+  padding-top: 2px;
+  padding-left: 13px;
+  font-size: 16px;
+  background: orange;
+  width: 3.5rem;
+  height: 1.5rem;
+  margin-left: 10px;
+  display: flex;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background: linear-gradient(45deg, #f5f5f5, #ebebeb);
+}
