@@ -4,8 +4,8 @@ const FooterItem = ({title, children}) => {
   return (
     <li className={classes.item}>
       <div className={classes.itemContainer}>
-        <h3>{title}</h3>
-        <small>{children}</small>
+        <h2>{title}</h2>
+        <p>{children}</p>
       </div>
     </li>
   );
