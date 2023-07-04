@@ -4,6 +4,7 @@ import Blog from "./Blog";
 import Git from "./Git";
 
 import classes from "./Footer.module.css";
+import Weather from "./Weather";
 
 const Footer = () => {
   const contactIcon = [
@@ -20,7 +21,7 @@ const Footer = () => {
           <FooterItem title="E-mail">dbfrhr20@gmail.com</FooterItem>
           <FooterItem title="Follow Me">
           {contactIcon && (
-              <div className={classes["icon-container"]}>
+              <div className={classes.iconContainer}>
                 {contactIcon.map((icon, i) => (
                   <a href={icon.link} target="_blank" rel="noopener noreferrer" key={i}>
                     {icon.component}
@@ -29,7 +30,7 @@ const Footer = () => {
               </div>
             )}
           </FooterItem>
-          <FooterItem>010-####-####</FooterItem>
+          <Weather />
         </ul>
       </div>
     </footer>
