@@ -8,6 +8,10 @@
   .contactMain {
     margin-bottom: 10px;
   }
+
+  .contactMain h1 {
+    font-size: 40px;
+  }
   
   .contactSub {
     width: 100%;

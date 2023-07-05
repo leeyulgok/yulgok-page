@@ -43,8 +43,8 @@ const Weather = () => {
             <div className={classes.description}>
                 <h4>수원시</h4>
                 <hr />
-                <p>현재온도: {Math.round(data.main.temp - 275.15)}°C</p>
-                <p>최고온도: {Math.round(data.main.temp_max - 275.15)}°C</p>
+                <p>현재온도: {Math.round(data.main.temp - 273.15)}°C</p>
+                <p>최고온도: {Math.round(data.main.temp_max - 273.15)}°C</p>
             </div>
         </div>
     );

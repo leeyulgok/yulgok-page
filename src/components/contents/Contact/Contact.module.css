@@ -1,7 +1,32 @@
-.contact-container {
-  display: flex;
+.contactMain {
+  margin: 0;
+  padding: 0;
+}
+
+.contactMainHeader {
+  margin: 50px 0px 0px 50px;
+}
+
+.contactMainHeader h1{
+  font-size: 40px;
+}
+
+.contactContainer {
   padding: 0 70px 0 70px;
   justify-content: space-between;
-  margin: 100px 0 100px 0;
+  margin-top: 50px
+}
+
+.rows {
+  display: flex;
+}
+
+.map {
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.map small {
+  padding-right: 20px;
 }
 
