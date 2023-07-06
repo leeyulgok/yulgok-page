@@ -3,3 +3,5 @@ node_modules
 node_modules
 useFetchWeather.js
 index.html
+firebase/
+.env
