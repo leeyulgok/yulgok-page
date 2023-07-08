@@ -19,6 +19,7 @@
 
 .rows {
   display: flex;
+  width: 100%;
 }
 
 .map {

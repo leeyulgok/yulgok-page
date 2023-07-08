@@ -12,21 +12,25 @@
   flex-wrap: wrap;
 }
 
-.contactContainer {
+.formFieldContainer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
 
-.contactRow {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+.inputFields {
+  width: 48%;
+  height: 100%;
+}
+
+.textAreaFields {
+  width: 48%;
+  height: 100%;
 }
 
 .submitBtn {
   margin-top: 24px;
-  flex: 0 0 48%;
+  width: 100%;
 }
 
 .contactBtn {
@@ -36,12 +40,4 @@
   background-color: salmon;
   border: 1px solid black;
   color: black;
-}
-
-.contactRow > div {
-  flex: 0 0 48%;
-}
-
-.contactRow:last-child > div {
-  flex: 0 0 100%;
 }

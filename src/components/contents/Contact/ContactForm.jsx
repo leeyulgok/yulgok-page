@@ -1,15 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { sendEmail } from "../../../redux/reducers/contactSlice";
 
-import FormField from "./FormField";
+import InputField from "./InputField";
+import TextAreaField from "./TextAreaField";
 import Button from "../../UI/Button";
+import EmailStatus from "./EmailStatus";
 
 import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
-  const contactStatus = useSelector((state) => state.contact.status);
-  const contactError = useSelector((state) => state.contact.error);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -21,6 +21,12 @@ const ContactForm = () => {
     dispatch(sendEmail({ name, phone, email, message }));
   };
 
+  const inputFields = [
+    { label: "Name", type: "text", name: "name", Component: InputField },
+    { label: "Phone", type: "text", name: "phone", Component: InputField },
+    { label: "E-mail", type: "email", name: "email", Component: InputField },
+  ];
+
   return (
     <section className={classes.contactSection}>
       <form
@@ -28,30 +34,22 @@ const ContactForm = () => {
         method="POST"
         onSubmit={handleSubmit}
       >
-        <div className={classes.contactContainer}>
-          <div className={classes.contactRow}>
-            <FormField label="Name" type="text" name="name" />
-            <FormField label="Phone" type="text" name="phone" />
+        <div className={classes.formFieldContainer}>
+          <div className={classes.inputFields}>
+            {inputFields.map((field, idx) => (
+              <field.Component key={idx} {...field} />
+            ))}
           </div>
-          <div className={classes.contactRow}>
-            <FormField label="E-mail" type="text" name="email" />
-            <div className={classes.submitBtn}>
-              <Button className={classes.contactBtn} type="submit">
-                Submit
-              </Button>
-            </div>
-          </div>
-          <div className={classes.contactRow}>
-            <FormField label="Message" type="textarea" name="message" />
+          <div className={classes.textAreaFields}>
+            <TextAreaField label="Message" name="message" />
           </div>
         </div>
-        <div>
-          {contactStatus === "loading" && <div>Sending email...</div>}
-          {contactStatus === "succeeded" && <div>Email successfully sent!</div>}
-          {contactStatus === "failed" && (
-            <div>Error sending email: {contactError}</div>
-          )}
+        <div className={classes.submitBtn}>
+          <Button className={classes.contactBtn} type="submit">
+            Send
+          </Button>
         </div>
+        <EmailStatus />
       </form>
     </section>
   );
