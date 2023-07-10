@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { sendEmail } from "../../../redux/reducers/contactSlice";
 
@@ -10,16 +11,32 @@ import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
+  const [isValid, setIsValid] = useState({
+    name: null,
+    phone: null,
+    email: null,
+    message: null,
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const name = event.target.elements.name.value;
-    const phone = event.target.elements.phone.value;
-    const email = event.target.elements.email.value;
-    const message = event.target.elements.message.value;
+    if (isFormValid) {
+      const name = event.target.elements.name.value;
+      const phone = event.target.elements.phone.value;
+      const email = event.target.elements.email.value;
+      const message = event.target.elements.message.value;
 
-    dispatch(sendEmail({ name, phone, email, message }));
+      dispatch(sendEmail({ name, phone, email, message }));
+    } else {
+      console.log("The form is not valid");
+    }
   };
+
+  const updateValidation = (name, value) => {
+    setIsValid((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const isFormValid = Object.values(isValid).every((value) => value);
 
   const inputFields = [
     { label: "Name", type: "text", name: "name", Component: InputField },
@@ -37,15 +54,29 @@ const ContactForm = () => {
         <div className={classes.formFieldContainer}>
           <div className={classes.inputFields}>
             {inputFields.map((field, idx) => (
-              <field.Component key={idx} {...field} />
+              <field.Component
+                key={idx}
+                {...field}
+                updateValidation={updateValidation}
+              />
             ))}
           </div>
           <div className={classes.textAreaFields}>
-            <TextAreaField label="Message" name="message" />
+            <TextAreaField
+              label="Message"
+              name="message"
+              updateValidation={updateValidation}
+            />
           </div>
         </div>
         <div className={classes.submitBtn}>
-          <Button className={classes.contactBtn} type="submit">
+          <Button
+            className={`${classes.contactBtn} ${
+              isFormValid ? classes.activeBtn : ""
+            }`}
+            type="submit"
+            disabled={!isFormValid}
+          >
             Send
           </Button>
         </div>

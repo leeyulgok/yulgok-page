@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import useSpeechRecognition from "../../../hooks/useSpeechToText";
 
 import Microphone from "../../UI/Microphone";
@@ -5,8 +7,13 @@ import NoMicrophone from "../../UI/NoMicrophone";
 
 import classes from "./TextAreaField.module.css";
 
-function TextAreaField({ label, name }) {
-  const { transcript, listening, resetTranscript, toggleListening } = useSpeechRecognition();
+function TextAreaField({ label, name, updateValidation }) {
+  const { transcript, listening, resetTranscript, toggleListening } =
+    useSpeechRecognition();
+
+  useEffect(() => {
+    updateValidation(name, transcript !== "");
+  }, [transcript, updateValidation, name]);
 
   return (
     <div className={classes.contents}>
@@ -14,9 +21,15 @@ function TextAreaField({ label, name }) {
         <label>{label}</label>
         <div>
           <div onClick={toggleListening}>
-            {listening ? <Microphone listening={listening} />: <NoMicrophone />}
+            {listening ? (
+              <Microphone listening={listening} />
+            ) : (
+              <NoMicrophone />
+            )}
           </div>
-          <div className={classes.reset} onClick={resetTranscript}>리셋</div>
+          <div className={classes.reset} onClick={resetTranscript}>
+            리셋
+          </div>
         </div>
       </div>
       <textarea

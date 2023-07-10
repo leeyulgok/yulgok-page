@@ -37,7 +37,15 @@
   width: 100%;
   height: 38px;
   border-radius: 0;
-  background-color: salmon;
+  background-color: gray;
   border: 1px solid black;
-  color: black;
+  color: #ccc;
+  cursor: not-allowed;
+  transition: all 0.3s ease;
+}
+
+.activeBtn {
+  background-color: salmon !important;
+  color: black !important;
+  cursor: pointer !important;
 }
