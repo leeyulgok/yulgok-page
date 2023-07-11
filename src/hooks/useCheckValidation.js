@@ -35,7 +35,7 @@ const useCheckValidation = (type, value) => {
       }
 
       const checkValidity = regex.test(value);
-      console.log(`Validity result: ${checkValidity}`); // 이 줄을 추가
+      console.log(`Validity result: ${checkValidity}`);
       setIsValid(checkValidity);
       if (!checkValidity) {
         setError(`입력값이 잘못됐습니다. 확인해주세요. ${errorMessage}`);

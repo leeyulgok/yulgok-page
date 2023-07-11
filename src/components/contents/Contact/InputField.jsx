@@ -3,7 +3,7 @@ import useCheckValidation from "../../../hooks/useCheckValidation";
 import classes from "./InputField.module.css";
 import InputError from "../../UI/InputError";
 
-function InputField({ label, type, name, updateValidation }) {
+const InputField = ({ label, type, name, updateValidation }) => {
   const [value, setValue] = useState("");
   const { isValid, error, touchHandler } = useCheckValidation(name, value);
 

@@ -5,7 +5,7 @@ const FooterItem = ({title, children}) => {
     <li className={classes.item}>
       <div className={classes.itemContainer}>
         <h2>{title}</h2>
-        <p>{children}</p>
+        <div>{children}</div>
       </div>
     </li>
   );

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { sendEmail } from "../../../redux/reducers/contactSlice";
 
@@ -32,9 +32,9 @@ const ContactForm = () => {
     }
   };
 
-  const updateValidation = (name, value) => {
+  const updateValidation = useCallback((name, value) => {
     setIsValid((prevState) => ({ ...prevState, [name]: value }));
-  };
+  }, []);
 
   const isFormValid = Object.values(isValid).every((value) => value);
 

@@ -17,13 +17,18 @@ const Footer = () => {
       <hr />
       <div className={classes.itemList}>
         <ul className={classes.items}>
-          <FooterItem title="Phone">010-5548-9567</FooterItem>
-          <FooterItem title="E-mail">dbfrhr20@gmail.com</FooterItem>
+          <FooterItem title="Phone" children={"010-5548-9567"} />
+          <FooterItem title="E-mail" children={"dbfrhr20@gmail.com"} />
           <FooterItem title="Follow Me">
-          {contactIcon && (
+            {contactIcon && (
               <div className={classes.iconContainer}>
                 {contactIcon.map((icon, i) => (
-                  <a href={icon.link} target="_blank" rel="noopener noreferrer" key={i}>
+                  <a
+                    href={icon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    key={i}
+                  >
                     {icon.component}
                   </a>
                 ))}
