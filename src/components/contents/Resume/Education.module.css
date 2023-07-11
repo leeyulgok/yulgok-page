@@ -1,0 +1,14 @@
+.educationContainer {
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.title {
+  margin-bottom: 10px;
+  flex-basis: 50%;
+}
+
+.title h2 {
+  font-size: 28px;
+  margin: 0;
+}

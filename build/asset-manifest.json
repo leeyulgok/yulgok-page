@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/yulgok-page/static/css/main.ec79cddc.css",
-    "main.js": "/yulgok-page/static/js/main.2b1fd07e.js",
+    "main.css": "/yulgok-page/static/css/main.d970f5df.css",
+    "main.js": "/yulgok-page/static/js/main.efb67993.js",
     "static/media/my_photo.JPG": "/yulgok-page/static/media/my_photo.fff243842fb9fabf2dd1.JPG",
     "static/media/강아지2.jpg": "/yulgok-page/static/media/강아지2.2618e99b01ecadcac2fd.jpg",
     "static/media/강아지3.jpg": "/yulgok-page/static/media/강아지3.eb11740782b09eb700ea.jpg",
     "static/media/강아지1.jpg": "/yulgok-page/static/media/강아지1.c2f27141a2f98953c5e3.jpg",
     "static/media/Spinner.gif": "/yulgok-page/static/media/Spinner.4afb53cd4898684c6487.gif",
     "index.html": "/yulgok-page/index.html",
-    "main.ec79cddc.css.map": "/yulgok-page/static/css/main.ec79cddc.css.map",
-    "main.2b1fd07e.js.map": "/yulgok-page/static/js/main.2b1fd07e.js.map"
+    "main.d970f5df.css.map": "/yulgok-page/static/css/main.d970f5df.css.map",
+    "main.efb67993.js.map": "/yulgok-page/static/js/main.efb67993.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec79cddc.css",
-    "static/js/main.2b1fd07e.js"
+    "static/css/main.d970f5df.css",
+    "static/js/main.efb67993.js"
   ]
 }

@@ -16,16 +16,21 @@ const Skills = () => {
 
   return (
     <div className={classes.skillsContainer}>
-      {data.map((d, idx) => (
-        <Fragment key={idx}>
-          <div>
-            <h3>{d.name}</h3>
-          </div>
-          <div>
-            <Percent percentData={d.percentData} />
-          </div>
-        </Fragment>
-      ))}
+      <div className={classes.title}>
+        <h2>Skills</h2>
+      </div>
+      <div className={classes.componentContainer}>
+        {data.map((d, idx) => (
+          <Fragment key={idx}>
+            <div>
+              <h3>{d.name}</h3>
+            </div>
+            <div>
+              <Percent percentData={d.percentData} />
+            </div>
+          </Fragment>
+        ))}
+      </div>
     </div>
   );
 };

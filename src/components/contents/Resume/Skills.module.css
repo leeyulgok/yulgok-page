@@ -1,4 +1,25 @@
 .skillsContainer {
-    display: flex;
-    justify-content: space-between;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.title {
+  margin-bottom: 10px;
+  flex-basis: 50%;
+  position: absolute;
+}
+
+.title h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.componentContainer {
+display: flex;
+  margin-top: 40px;
+}
+
+.skillsContainer {
+  display: flex;
+  justify-content: space-between;
 }

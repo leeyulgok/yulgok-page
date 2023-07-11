@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 const useCheckValidation = (type, value) => {
   const [isValid, setIsValid] = useState(true);
   const [error, setError] = useState("");
-  const [isTouched, setIsTouched] = useState(false); // 추가된 코드
+  const [isTouched, setIsTouched] = useState(false);
   const timer = useRef(null);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const useCheckValidation = (type, value) => {
       clearTimeout(timer.current);
     }
     timer.current = setTimeout(() => {
-      console.log(`Checking validation for type: ${type} and value: ${value}`); // 이 줄을 추가
+      console.log(`Checking validation for type: ${type} and value: ${value}`);
 
       let errorMessage = "";
       let regex;
@@ -50,10 +50,10 @@ const useCheckValidation = (type, value) => {
   }, [type, value, isTouched]);
 
   const touchHandler = () => {
-    setIsTouched(true); // 추가된 코드
+    setIsTouched(true);
   };
 
-  return { isValid, error, touchHandler }; // 수정된 코드
+  return { isValid, error, touchHandler };
 };
 
 export default useCheckValidation;
